@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBMC Student Enrollment Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+    --navy: #15324d;
+    --sky: #5ba4e1;
+    --pink: #f06292;
+    --footer-bg: #0b1a2a;
+}
+
+body {
+    margin: 0;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    background-image: url(obmc\ bg.webp);
+}
+
+/* --- Navigation & Search --- */
+.navbar-white { background: white; padding: 12px 0; }
+.nav-logo { width: 45px; height: auto; }
+.main-name { font-size: 0.85rem; font-weight: 750; color: #1e4469; line-height: 1.1; letter-spacing: 0.5px; }
+.sub-name { font-size: 0.8rem; font-weight: 750; color: #1e4469; }
+
+.nav-links a { text-decoration: none; color: #666; font-size: 0.95rem; margin: 0 22px; }
+.nav-links a.active { color: var(--pink) !important; font-weight: 700; }
+.nav-links {gap: 80px;}
+.search-group { display: flex; height: 35px; }
+.search-input { background: var(--navy); border: none; color: white; border-radius: 4px 0 0 4px; padding: 0 12px; font-size: 0.85rem; width: 170px; }
+.search-btn { background: var(--sky); color: white; border: none; border-radius: 0 4px 4px 0; padding: 0 20px; font-size: 0.85rem; }
+
+/* --- Hero Background & Gradient --- */
+.hero-section {
+    background-image: url('obmc bg.jpg'); /* Architectural image from your upload */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.gradient-overlay {
+    background: linear-gradient(180deg, rgba(21, 50, 77, 0.92) 0%, rgba(40, 80, 120, 0.85) 100%);
+    min-height: 100vh;
+}
+
+.form-shield { width: 95px; height: auto; }
+
+/* --- Glassmorphism Form Card --- */
+.glass-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.08) 100%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 50px 75px;
+    max-width: 1000px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+label { color: white; font-size: 0.85rem; margin-bottom: 6px; display: block; opacity: 0.9; }
+.form-control { background: white !important; border: none; border-radius: 4px; height: 40px; }
+.section-divider { color: white; font-size: 1.2rem; border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 12px; margin: 40px 0 25px 0; font-weight: 300; }
+.submit-btn { background: var(--navy); color: white; border: none; padding: 12px 65px; border-radius: 6px; font-weight: 700; font-size: 1rem; }
+
+/* --- Footer Styling --- */
+.footer-custom { background: var(--footer-bg); color: white; padding: 80px 0; }
+.footer-logo { width: 110px; height: auto; filter: brightness(0) invert(1); }
+.footer-head { text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-bottom: 22px; font-weight: 700; }
+.footer-info { font-size: 0.85rem; opacity: 0.6; line-height: 1.8; }
+.footer-copy { font-size: 0.8rem; opacity: 0.4; margin-top: 10px; }
+
+    </style>
+</head>
+
+<body>
+   <header class="navbar navbar-expand-lg navbar-white shadow-sm">
+    <div class="container-fluid px-lg-5">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="butterfly.webp" alt="OBMC Logo" class="nav-logo">
+            <div class="brand-text ms-2">
+                <div class="main-name">OPERATION BROTHERHOOD</div>
+                <div class="sub-name">MONTESSORI CENTER</div>
+            </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <nav class="nav-links d-lg-flex ms-auto align-items-center">
+                <a href="index.html" class="active">Home</a>
+                <a href="courses.html">Courses</a>
+                <a href="enroll.html">Enroll Now</a>
+                <a href="contact.html">Contact</a>
+
+                <div class="search-group ms-lg-4 mt-3 mt-lg-0">
+                    <input type="text" class="search-input" placeholder="Search">
+                    <button class="search-btn">Search</button>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <section class="hero-section">
+    <div class="gradient-overlay d-flex align-items-center justify-content-center">
+        <div class="container text-center text-white">
+            <div class="bg-white rounded-circle d-inline-block p-4 mb-4" style="width: 250px; height: 250px;">
+                <img src="butterfly.webp" alt="OBMC Logo" class="img-fluid mt-3">
+            </div>
+            <h1 class="display-6 fw-bold">OB Montessori Center</h1>
+            <p class="lead fs-4">Metro Manila, Angeles</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-custom">
+        <div class="container text-center text-md-start">
+            <div class="row g-5 align-items-start">
+                <div class="col-md-3">
+                    <img src="butterfly.webp" class="footer-logo mb-3" alt="Footer Logo">
+                    <p class="footer-copy">© 2025 OBMC. All rights reserved.</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="footer-head">Location</h6>
+                    <p class="footer-info">Angeles City, Pampanga<br>Fairview, Quezon City<br>Greenhills, San Juan City</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="footer-head">Contact</h6>
+                    <p class="footer-info">+63 2 8722 9720 to 26<br>info@obmontessori.edu.ph</p>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="footer-head">Learn More</h6>
+                    <p class="footer-info">Visit our Facebook page<br>Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
